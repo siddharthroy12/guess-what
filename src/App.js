@@ -17,7 +17,7 @@ export default function App() {
 	const [boardState, setBoardState] = useState(defaultBoardState)
 	const [currentRow, setCurrentRow] = useState(0)
 	const [currentCell, setCurrentCell] = useState(0)
-	const [word, setWord] = useState('test')
+	const [word, setWord] = useState('HELLO')
 
 	const onKeyInput = (key) => {
 		if (key !== "Enter" && key !== "Back") {
