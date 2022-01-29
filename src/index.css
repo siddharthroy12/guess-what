@@ -24,4 +24,7 @@ code {
 	--border-color: #3a3a3c;
 	--text-color: #d7dadc;
 	--menu-color: #565758;
+	--correct-color: rgb(83, 141, 78);
+	--present-color: rgb(181, 159, 59);
+	--wrong-color: rgb(58, 58, 60);
 }
