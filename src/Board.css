@@ -1,5 +1,5 @@
 .board {
-	height: calc(100vh - 50px);
+	height: calc(100vh - 260px);
 	display: flex;
 	place-content: center;
 }
@@ -22,5 +22,9 @@
 	place-content: center;
 	border: 2px solid var(--border-color);
 	width: 100%;
+	font-size: 2rem;
+	font-weight: bold;
+	color: var(--text-color);
+	padding-top: 6px;
 }
 
