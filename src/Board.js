@@ -28,9 +28,7 @@ export default function Board({ boardState, word, currentRow }) {
 	}, [])
 
 	const getClassName = (cell, index, row, currentRow) => {
-		console.log(currentRow, row)
 		if (row < currentRow) {
-			console.log(true)
 			if (getKeyState(cell, index, word) === -1) {
 				return "board-tile tile-wrong"
 			} else if(getKeyState(cell, index, word) === 0) {
@@ -50,7 +48,9 @@ export default function Board({ boardState, word, currentRow }) {
 				<div
 					className={getClassName(cell, index, rowIndex, currentRow)}
 					key={index}>
+					<span>
 					{cell}
+					</span>
 				</div>
 			))}
 		</div>))}

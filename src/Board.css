@@ -20,11 +20,18 @@
 .board-tile {
 	display: inline-flex;
 	place-content: center;
+	align-items: center;
 	border: 2px solid var(--border-color);
 	width: 100%;
 	font-size: 2rem;
 	font-weight: bold;
 	color: var(--text-color);
-	padding-top: 6px;
 }
 
+
+
+@media screen and (max-height: 600px) {
+	.board-tile {
+		font-size: 1rem;
+	}
+}
