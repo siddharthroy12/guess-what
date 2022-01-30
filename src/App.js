@@ -1,17 +1,22 @@
-import randomWords from 'word-pictionary-list'
+import wordList from './wordList'
 import { useState, useEffect } from 'react'
 import Header from './Header'
 import Board from './Board'
 import Keyboard from './Keyboard'
 import GameOver from './GameOver'
 
-// Shamelessly copied from stackoverflow
-function httpGet(theUrl)
-{
-	var xmlHttp = new XMLHttpRequest();
-	xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-	xmlHttp.send( null );
-	return xmlHttp.responseText;
+function getRandomWord() {
+	return wordList[Math.floor(Math.random()*wordList.length)].toUpperCase();
+}
+
+function isInWordList(wordToCheck) {
+	for (let i = 0; i < wordList.length; i++) {
+		if (wordList[i].toUpperCase() === wordToCheck) {
+			return true
+		}
+	}
+
+	return false
 }
 
 // You expected a loop but it's me HARD CODED EMPTY MATRIX!!!
@@ -32,12 +37,7 @@ export default function App() {
 	const [gameOver, setGameOver] = useState(0) // 0: running, 1: win, 2: lose
 	
 	const newGame = () => {
-		let word = ''
-		// Very inefficient, I will create a file with onyl 5 letter words later
-		while (word.length !== 5) {
-			word = randomWords()
-		}
-		setWord(word.toUpperCase())
+		setWord(getRandomWord())
 		setGameOver(0)
 		setCurrentCell(0)
 		setCurrentRow(0)
@@ -77,16 +77,9 @@ export default function App() {
 			boardState[currentRow].forEach(cell => cell === '' ? rowFull = false : null)
 			if (rowFull && currentRow < 6) {
 				let currentWord = boardState[currentRow].join('')
-				let isInWordList = false
-
-				randomWords.wordList.forEach(word => {
-					if (word.toUpperCase() === currentWord) {
-						isInWordList = true
-					}
-				})
 
 				// If current word is valid
-				if (isInWordList) {
+				if (isInWordList(currentWord)) {
 					setCurrentRow(prev => prev + 1)
 					setCurrentCell(0)
 				}
@@ -109,7 +102,7 @@ export default function App() {
 				setGameOver(1)
 			}
 		}
-	}, [boardState, currentRow])
+	}, [boardState, currentRow, word])
 
 	console.log({word})
 
