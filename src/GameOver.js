@@ -7,7 +7,7 @@ export default function GameOver({ word, state, onRestart }) {
 			<p className="game-word">{word}</p>
 			<div className="game-over__box__buttons">
 				<div className="game-over__box__buttons__box">
-					<button className="btn">
+					<button className="btn" onClick={onRestart}>
 						Next Wordle
 					</button>
 				</div>

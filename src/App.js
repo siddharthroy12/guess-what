@@ -38,10 +38,11 @@ export default function App() {
 	
 	const newGame = () => {
 		setWord(getRandomWord())
-		setGameOver(0)
 		setCurrentCell(0)
 		setCurrentRow(0)
-		setBoardState(defaultBoardState)
+		// Easy way to copy a nested array
+		setBoardState(JSON.parse(JSON.stringify(defaultBoardState)))
+		setGameOver(0)
 	}
 
 	const onKeyInput = (key) => {

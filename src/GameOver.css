@@ -1,6 +1,7 @@
 .game-over {
-	display: grid;
-	place-content: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	position: fixed;
 	inset: 0;
 	background-color: rgba(0, 0, 0, 0.5);
@@ -10,17 +11,18 @@
 }
 
 .game-over__box {
+	margin: 20px;
 	border-radius: 8px;
 	border-color: var(--modal-border-color);
 	background-color: var(--modal-background-color);
-	width: 500px;
-	max-height: 90%;
+	width: 100%;
+	max-width: calc(500px - 20px);
+	max-height: 400px;
 	padding: 16px;
 	box-shadow: 0 4px 23px 0 rgb(0 0 0 / 20%);
 	color: var(--text-color);
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 }
 
 .game-over-title {
@@ -36,7 +38,7 @@
 	display: inline-block;
 	padding: 1em;
 	color: var(--text-color);
-	margin: auto;
+	margin: 0 auto;
 	border: 1px solid var(--text-color);
 	border-radius: 5px;
 	margin-bottom: 50px;
