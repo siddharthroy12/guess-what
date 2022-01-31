@@ -4,6 +4,7 @@ import Header from './Header'
 import Board from './Board'
 import Keyboard from './Keyboard'
 import GameOver from './GameOver'
+import Alert from './Alert'
 
 function getRandomWord() {
 	return wordList[Math.floor(Math.random()*wordList.length)].toUpperCase();
@@ -35,7 +36,24 @@ export default function App() {
 	const [currentCell, setCurrentCell] = useState(0)
 	const [word, setWord] = useState('')
 	const [gameOver, setGameOver] = useState(0) // 0: running, 1: win, 2: lose
-	
+	const [alerts, setAlerts] = useState([])
+
+	const addAlert = (text) => {
+		setAlerts(prev => {
+			let copy = [...prev]
+			copy.push(text)
+			return copy
+		})
+	}
+
+	const removeAlert = (index) => {
+		setAlerts(prev => {
+			let copy = [...prev]
+			copy.splice(index, 1)
+			return copy;
+		})
+	}
+
 	const newGame = () => {
 		setWord(getRandomWord())
 		setCurrentCell(0)
@@ -83,6 +101,8 @@ export default function App() {
 				if (isInWordList(currentWord)) {
 					setCurrentRow(prev => prev + 1)
 					setCurrentCell(0)
+				} else {
+					addAlert('Not in word list');
 				}
 			}
 		}
@@ -105,10 +125,10 @@ export default function App() {
 		}
 	}, [boardState, currentRow, word])
 
-	console.log({word})
-
 	return (<div className="container">
-		{ gameOver > 0 ? <GameOver state={gameOver} word={word} onRestart={newGame}/> : null}
+		{alerts.map((text,index) => <Alert text={text} onClose={() => removeAlert(index)}/>)}
+
+		{ gameOver > 0 ? <GameOver state={gameOver} addAlert={addAlert} word={word} boardState={boardState} onRestart={newGame}/> : null}
 		<Header />
 		<Board boardState={boardState} word={word} currentRow={currentRow}/>
 		<Keyboard onInput={onKeyInput}/>

@@ -2,7 +2,8 @@ import { useEffect, useRef } from 'react'
 import './Board.css'
 
 // -1: Not present, 0: present but wrong spot, 1: present and right spot
-function getKeyState(key, index, word) {
+export function getKeyState(key, index, word) {
+	if (key === '') return -1
 	if (word.includes(key)) {
 		if (word[index] === key) return 1
 		else return 0
