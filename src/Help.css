@@ -56,16 +56,16 @@
 }
 
 .tile-correct {
-	background-color: var(--correct-color);
+	background-color: var(--correct-color) !important;
 	border: 2px solid rgba(0,0,0,0);
 }
 
 .tile-present {
-	background-color: var(--present-color);
+	background-color: var(--present-color) !important;
 	border: 2px solid rgba(0,0,0,0);
 }
 
 .tile-wrong {
-	background-color: var(--wrong-color);
+	background-color: var(--wrong-color) !important;
 	border: 2px solid rgba(0,0,0,0);
 }

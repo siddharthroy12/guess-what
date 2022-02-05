@@ -126,11 +126,11 @@ export default function App() {
 	}, [boardState, currentRow, word])
 
 	return (<div className="container">
-		{alerts.map((text,index) => <Alert text={text} onClose={() => removeAlert(index)}/>)}
+		{alerts.map((text,index) => <Alert text={text} key={index} onClose={() => removeAlert(index)}/>)}
 
 		{ gameOver > 0 ? <GameOver state={gameOver} addAlert={addAlert} word={word} boardState={boardState} onRestart={newGame}/> : null}
 		<Header />
 		<Board boardState={boardState} word={word} currentRow={currentRow}/>
-		<Keyboard onInput={onKeyInput}/>
+		<Keyboard onInput={onKeyInput} boardState={boardState} word={word} currentRow={currentRow}/>
 	</div>)
 }
