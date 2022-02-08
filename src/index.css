@@ -5,13 +5,15 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-
-	background-color: var(--page-color);
 }
 
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
+}
+
+.page {
+	background-color: var(--page-color);
 }
 
 .container {
@@ -31,4 +33,18 @@ code {
 	--key-color: #d7dadc;
 	--modal-border-color: #1a1a1b;
 	--modal-background-color: #121213;
+}
+
+.light-mode {
+  --page-color: #ffffff;
+	--border-color: #d3d6da;
+	--text-color: #1a1a1b;
+	--menu-color: #878a8c;
+	--correct-color: #53ab4c;
+	--present-color: rgb(215 184 41);
+	--wrong-color: #f75858;
+	--key-bg: #d3d6da;
+	--key-color: #1a1a1b;
+	--modal-border-color: #f6f7f8;
+	--modal-background-color: #ffffff;
 }

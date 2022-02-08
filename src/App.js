@@ -37,6 +37,7 @@ export default function App() {
 	const [word, setWord] = useState('')
 	const [gameOver, setGameOver] = useState(0) // 0: running, 1: win, 2: lose
 	const [alerts, setAlerts] = useState([])
+  const [darkModeOn, setDarkModeOn] = useState(localStorage.getItem('theme') === 'light' ? false : true);
 
 	const addAlert = (text) => {
 		setAlerts(prev => {
@@ -113,6 +114,16 @@ export default function App() {
 		newGame()
 	}, [])
 
+  const onModeChange = (value) => {
+    if (value) {
+      localStorage.setItem('theme', 'dark')
+    } else {
+      localStorage.setItem('theme', 'light')
+    }
+
+    setDarkModeOn(value)
+  }
+
 	// Check for game over
 	useEffect(() => {
 		if (currentRow > 0 ) {
@@ -125,12 +136,11 @@ export default function App() {
 		}
 	}, [boardState, currentRow, word])
 
-	return (<div className="container">
+  return (<div className={"page" + (darkModeOn ? '' : ' light-mode')}><div className="container">
 		{alerts.map((text,index) => <Alert text={text} key={index} onClose={() => removeAlert(index)}/>)}
-
 		{ gameOver > 0 ? <GameOver state={gameOver} addAlert={addAlert} word={word} boardState={boardState} onRestart={newGame}/> : null}
-		<Header />
+		<Header setDarkMode={onModeChange}/>
 		<Board boardState={boardState} word={word} currentRow={currentRow}/>
 		<Keyboard onInput={onKeyInput} boardState={boardState} word={word} currentRow={currentRow}/>
-	</div>)
+  </div></div>)
 }
