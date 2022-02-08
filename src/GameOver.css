@@ -61,7 +61,7 @@
 }
 
 .btn {
-	background-color: var(--text-color);
+	background-color: var(--button-bg);
 	padding: 1em 2em;
 	border-radius: 5px;
 	font-size: .9rem;
@@ -70,6 +70,7 @@
 	margin: 20px;
 	display: flex;
 	align-items: center;
+  color: var(--button-text);
 }
 
 .btn svg {

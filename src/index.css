@@ -33,6 +33,8 @@ code {
 	--key-color: #d7dadc;
 	--modal-border-color: #1a1a1b;
 	--modal-background-color: #121213;
+  --button-bg: #d7dadc;
+  --button-text: #121213;
 }
 
 .light-mode {
