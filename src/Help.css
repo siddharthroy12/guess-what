@@ -83,3 +83,17 @@
   font-size: 1.3em;
 }
 
+.setting a {
+  color: var(--text-color);
+}
+
+
+.help__footer {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 0 20px;
+  color: var(--text-color);
+  text-align: end;
+}

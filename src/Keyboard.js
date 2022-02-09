@@ -5,7 +5,7 @@ import './Keyboard.css'
 const KEYS = [
 	['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
 		['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
-	['Enter', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', 'Back']
+	['Back', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', 'Enter']
 ]
 
 export default function Keyboard({ onInput, boardState, word, currentRow }) {

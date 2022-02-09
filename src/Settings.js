@@ -23,6 +23,17 @@ export default function Settings({ onClose, setDarkMode }) {
         <p className="setting-name">Dark Theme</p>
         <Switch onChange={darkModeButtonHandler} value={localStorage.getItem('theme') === 'light' ? false : true }/>
       </div>
+      <div className="setting">
+        <p className="setting-name">Developer</p>
+        <div>
+          <a href="https://twitter.com/Siddharth_Roy12" target="_blank" rel="noreferrer">Twitter</a>
+          {" | "}
+          <a href="http://siddharthroy.ml/" target="_blank" rel="noreferrer">Website</a>
+        </div>
+      </div>
+    </div>
+    <div className="help__footer">
+      <p>Version 1.0.0</p>
     </div>
   </div>)
 }
