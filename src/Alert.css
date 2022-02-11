@@ -1,12 +1,12 @@
 .alert {
-	position: fixed;
-	top: 20px;
-	left: 50%;
-	z-index: 9000;
-	background-color: var(--text-color);
-	color: var(--page-color);
-	padding: .5em 1em;
-	border-radius: 5px;
-	font-size: 1rem;
-	transform: translateX(-50%);
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  z-index: 9000;
+  background-color: var(--text-color);
+  color: var(--page-color);
+  padding: .5em 1em;
+  border-radius: 5px;
+  font-size: 1rem;
+  transform: translateX(-50%);
 }

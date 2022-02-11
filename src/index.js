@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-// Plz don't sue me
+// It's a shameless wordle clone
 ReactDOM.render(
   <App />,
   document.getElementById('root')

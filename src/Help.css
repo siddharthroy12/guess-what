@@ -1,74 +1,78 @@
 .help {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	height: 100vh;
-	z-index: 2;
-	background-color: var(--page-color);
-	padding: 0 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 2;
+  background-color: var(--page-color);
+  padding: 0 0px;
+}
+
+.help p {
+  margin: 1em 0;
 }
 
 .help__header {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .help__header h2 {
-	color: var(--text-color);
-	font-weight: 700;
-	font-size: 16px;
-	letter-spacing: 0.5px;
-	text-transform: uppercase;
-	text-align: center;
-	margin-bottom: 10px;
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .help__header__close {
-	position: absolute;
-	right: 0;
-	user-select: none;
-	cursor: pointer;
+  position: absolute;
+  right: 0;
+  user-select: none;
+  cursor: pointer;
 }
 
 .instructions {
-	font-size: 14px;
-	color: var(--text-color);
+  font-size: 14px;
+  color: var(--text-color);
   padding: 20px;
 }
 
 .examples {
-	border-bottom: 1px solid var(--border-color);
-	border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
 }
 
 .tile {
-	width: 40px;
-	height: 40px;
-	border: 2px solid var(--border-color);
-	display: inline-flex;
-	place-content: center;
-	font-size: 2rem;
-	font-weight: bold;
-	margin-right: 5px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--border-color);
+  display: inline-flex;
+  place-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 5px;
 }
 
 .tile-correct {
-	background-color: var(--correct-color) !important;
-	border: 2px solid rgba(0,0,0,0);
+  background-color: var(--correct-color) !important;
+  border: 2px solid rgba(0,0,0,0);
 }
 
 .tile-present {
-	background-color: var(--present-color) !important;
-	border: 2px solid rgba(0,0,0,0);
+  background-color: var(--present-color) !important;
+  border: 2px solid rgba(0,0,0,0);
 }
 
 .tile-wrong {
-	background-color: var(--wrong-color) !important;
-	border: 2px solid rgba(0,0,0,0);
+  background-color: var(--wrong-color) !important;
+  border: 2px solid rgba(0,0,0,0);
 }
 
 

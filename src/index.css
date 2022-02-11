@@ -1,52 +1,61 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition-duration: .6s;
+}
+
 body {
-	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-		sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-		monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
 .page {
-	background-color: var(--page-color);
+  background-color: var(--page-color);
 }
 
 .container {
-	max-width: 500px;
-	margin: auto;
+  max-width: 500px;
+  margin: auto;
 }
 
 :root {
-	--page-color: #121213;
-	--border-color: #3a3a3c;
-	--text-color: #d7dadc;
-	--menu-color: #565758;
-	--correct-color: #53ab4c;
-	--present-color: rgb(215 184 41);
-	--wrong-color: #f75858;
-	--key-bg: #444444;
-	--key-color: #d7dadc;
-	--modal-border-color: #1a1a1b;
-	--modal-background-color: #121213;
+  --page-color: #121213;
+  --border-color: #3a3a3c;
+  --text-color: #d7dadc;
+  --menu-color: #565758;
+  --correct-color: #53ab4c;
+  --present-color: rgb(215 184 41);
+  --wrong-color: #f75858;
+  --key-bg: #444444;
+  --key-color: #d7dadc;
+  --modal-border-color: #1a1a1b;
+  --modal-background-color: #121213;
   --button-bg: #d7dadc;
   --button-text: #121213;
 }
 
 .light-mode {
   --page-color: #ffffff;
-	--border-color: #d3d6da;
-	--text-color: #1a1a1b;
-	--menu-color: #878a8c;
-	--correct-color: #53ab4c;
-	--present-color: rgb(215 184 41);
-	--wrong-color: #f75858;
-	--key-bg: #d3d6da;
-	--key-color: #1a1a1b;
-	--modal-border-color: #f6f7f8;
-	--modal-background-color: #ffffff;
+  --border-color: #d3d6da;
+  --text-color: #1a1a1b;
+  --menu-color: #878a8c;
+  --correct-color: #53ab4c;
+  --present-color: rgb(215 184 41);
+  --wrong-color: #f75858;
+  --key-bg: #d3d6da;
+  --key-color: #1a1a1b;
+  --modal-border-color: #f6f7f8;
+  --modal-background-color: #ffffff;
 }

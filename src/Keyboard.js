@@ -3,9 +3,9 @@ import { getKeyState } from './Board.js'
 import './Keyboard.css'
 
 const KEYS = [
-	['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
-		['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
-	['Back', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', 'Enter']
+  ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
+    ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
+  ['Back', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', 'Enter']
 ]
 
 export default function Keyboard({ onInput, boardState, word, currentRow }) {
@@ -13,22 +13,22 @@ export default function Keyboard({ onInput, boardState, word, currentRow }) {
   const [presentLetters, setPresentLetters] = useState([])
   const [incorrectLetters, setIncorrectLetters] = useState([])
 
-	useEffect(() => {
-		const onKeydown = (event) => {
-			if (event.keyCode >= 65 && event.keyCode <= 90) {
-				onInput(event.key.toUpperCase())
-			}
+  useEffect(() => {
+    const onKeydown = (event) => {
+      if (event.keyCode >= 65 && event.keyCode <= 90) {
+        onInput(event.key.toUpperCase())
+      }
 
-			if (event.key === 'Enter') onInput('Enter')
-			if (event.key === 'Backspace') onInput('Back')
-		}
+      if (event.key === 'Enter') onInput('Enter')
+      if (event.key === 'Backspace') onInput('Back')
+    }
 
-		document.addEventListener('keydown', onKeydown)
+    document.addEventListener('keydown', onKeydown)
 
-		return () => {
-			document.removeEventListener('keydown', onKeydown)
-		}
-	}, [onInput])
+    return () => {
+      document.removeEventListener('keydown', onKeydown)
+    }
+  }, [onInput])
 
   useEffect(() => {
     let correctLetters = []
@@ -67,14 +67,14 @@ export default function Keyboard({ onInput, boardState, word, currentRow }) {
     return result
   }
 
-	return (<div className="keyboard">
-		{KEYS.map((row, index) => (<div className="keyboard-row" key={index}>
-			{row.map(key => (
-				<button
-					className={getClassName(key)}
-					onClick={() => onInput(key)}
-					key={key}>{key}
-				</button>))}
-		</div>))}
-	</div>)
+  return (<div className="keyboard">
+    {KEYS.map((row, index) => (<div className="keyboard-row" key={index}>
+      {row.map(key => (
+        <button
+          className={getClassName(key)}
+          onClick={() => onInput(key)}
+          key={key}>{key}
+        </button>))}
+    </div>))}
+  </div>)
 }

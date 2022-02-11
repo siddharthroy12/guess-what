@@ -1,28 +1,28 @@
 .keyboard {
-	height: 209px;
-	display: flex;
-	flex-direction: column;
+  height: 210px;
+  display: flex;
+  flex-direction: column;
 }
 
 .keyboard-row {
-	display: flex;
-	justify-content: center;
-	align-items: stretch;
-	height: 100%;
-	margin: 4px 0;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 100%;
+  margin: 4px 0;
 }
 
 .keyboard-key {
-	height: 100%;
-	background-color: var(--key-bg);
-	color: var(--key-color);
-	border-radius: 5px;
-	max-width: 40px;
-	width: 100%;
-	margin: 0 4px;
-	font-weight: bold;
+  height: 100%;
+  background-color: var(--key-bg);
+  color: var(--key-color);
+  border-radius: 5px;
+  max-width: 40px;
+  width: 100%;
+  margin: 0 4px;
+  font-weight: bold;
 }
 
 .keyboard-key-big {
-	max-width: 60px;
+  max-width: 60px;
 }
