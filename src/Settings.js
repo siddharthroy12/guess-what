@@ -26,14 +26,14 @@ export default function Settings({ onClose, setDarkMode }) {
       <div className="setting">
         <p className="setting-name">Developer</p>
         <div>
-          <a href="https://twitter.com/Siddharth_Roy12" target="_blank" rel="noreferrer">Twitter</a>
+          <a href="https://twitter.com/reactoverflow" target="_blank" rel="noreferrer">Twitter</a>
           {" | "}
           <a href="http://siddharthroy.ml/" target="_blank" rel="noreferrer">Website</a>
         </div>
       </div>
     </div>
     <div className="help__footer">
-      <p>Version 1.0.1</p>
+      <p>Version 1.0.2</p>
     </div>
   </div>)
 }
